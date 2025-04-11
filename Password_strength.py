@@ -21,30 +21,30 @@ st.write('Enter your Password belo to check the secuirty level.')
 
 
 # Function password
-def check_password_strength(password):
+def check_password_strength(Password):
     score = 0,
     feedback = []
 
-    if len(password) >= 8:
+    if len(Password) >= 8:
         score += 1 
     else:
         feedback.append('Password Must be 8 Character')     
 
     
-    if re.search(r'[A-Z]' , password) and re.search(r'[a-z]' , password):
+    if re.search(r'[A-Z]' , Password) and re.search(r'[a-z]' , Password):
         score += 1
     else:
         feedback.append('❌Password should include **both uper case [A-Z] and lower case[a-z]**.')
 
 
 
-    if re.search(r'/d' , password): 
+    if re.search(r'/d' , Password): 
         score += 1
     else:
         feedback.append('❌Password should include **at least onr number[0-9]**.')    
 
 
-    if re.search(r'[!@#$%^&*]' , password):
+    if re.search(r'[!@#$%^&*]' , Password):
         score += 1    
     else:
         feedback.append('❌Password should include **at least one speacial character(!@#$%^&*)**.')    
