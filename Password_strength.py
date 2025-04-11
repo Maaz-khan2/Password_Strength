@@ -21,7 +21,7 @@ st.write('Enter your Password belo to check the secuirty level.')
 
 
 # Function password
-def password_checker(password):
+def check_password_strength(password):
     score = 0,
     feedback = []
 
@@ -72,6 +72,6 @@ Password = st.text_input('Enter your Password' , type='password' , help='Ensure 
 # check password
 if st.button('Check Password'):
    if Password:
-        password_checker(Password)
+         check_password_strength(Password)
    else:
        st.warning('Please Enter a Password first!')     
